@@ -1,0 +1,30 @@
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "transform-async-to-generator",
+    "transform-regenerator",
+    "transform-class-properties",
+    ["transform-runtime", { "polyfill": false }]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "react",
+        "stage-1"
+      ],
+      "sourceMaps": "inline",
+      "plugins": [
+        "react-hot-loader/babel",
+        "rewire",
+        "transform-async-to-generator",
+        "transform-regenerator",
+        "transform-class-properties"
+      ]
+    }
+  }
+}
