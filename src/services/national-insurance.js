@@ -51,6 +51,10 @@ const slice = R.curry((floor, ceiling, income) => {
     return income - floor;
   }
 
+  if (income >= floor && income >= ceiling) {
+    return (ceiling - floor);
+  }
+
   return 0;
 });
 
