@@ -132,14 +132,14 @@ test('national-insurance.bandsOnDate', (t) => {
 test('national-insurance.slice', (t) => {
   [
     [0, 5, 0, 0, 'zero when input == zero'],
-    // [0, 5, 3, 3, 'number when within zero-floored range'],
-    // [0, 5, 5, 5, 'number when input == ceiling'],
-    // [0, 5, 6, 5, 'full slice when input > ceiling with zero floor'],
-    // [5, 10, 5, 0, 'zero when input == floor'],
-    // [5, 10, 6, 1, 'number when within nonzero-floored range'],
-    // [5, 10, 10, 5, 'number when input == ceiling with nonzero floor'],
-    // [5, 15, 18, 10, 'full slice when input > ceiling with nonzero floor'],
-    // [5, 15, 4, 0, 'zero when input < floor'],
+    [0, 5, 3, 3, 'number when within zero-floored range'],
+    [0, 5, 5, 5, 'number when input == ceiling'],
+    [0, 5, 6, 5, 'full slice when input > ceiling with zero floor'],
+    [5, 10, 5, 0, 'zero when input == floor'],
+    [5, 10, 6, 1, 'number when within nonzero-floored range'],
+    [5, 10, 10, 5, 'number when input == ceiling with nonzero floor'],
+    [5, 15, 18, 10, 'full slice when input > ceiling with nonzero floor'],
+    [5, 15, 4, 0, 'zero when input < floor'],
 
   ].forEach(([floor, ceil, input, expected, message]) => {
     t.test(message, (assert) => {
