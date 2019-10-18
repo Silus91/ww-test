@@ -141,13 +141,13 @@ test('national-insurance.slice', (t) => {
     [5, 15, 18, 10, 'full slice when input > ceiling with nonzero floor'],
     [5, 15, 4, 0, 'zero when input < floor'],
 
-  ].forEach(([floor, ceil, input, expected, message]) => {
+  ].forEach(([floor, ceiling, input, expected, message]) => {
     t.test(message, (assert) => {
       assert.plan(1);
 
       const actual = target.slice(
         RD.decimal(floor),
-        RD.decimal(ceil),
+        RD.decimal(ceiling),
       )(RD.decimal(input));
 
       assert.deepEquals(actual, RD.decimal(expected));
