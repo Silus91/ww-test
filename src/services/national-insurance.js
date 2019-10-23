@@ -25,39 +25,19 @@ const bandsOnDate = (date) => {
 };
 
 
-// Run this command to see the result of the unit tests,
-//  you will need to implement the empty function
-//  at `line:27` of `src/services/national-insurance.js`
-//   in order to make the failing unit tests pass.
-// TODO this should do more than return the number it's given
-
-// allowance === celing
-// floor == value not enough for rate
 const slice = R.curry((floor, ceiling, income) => {
   
-                                // £581
-                    // == 718 floor        // ceiling
-  // £166 to £962 a week (£719 -> £1300 <- sdfsdfssdff£4,167 a month)	12%
-
-  // over ceiling 0.02
-
-  // Over £962 a week (£4,167 a month)	2%
-
   if (income <= floor) {
-    return 0;
+    return RD.decimal(0);
   }
 
-  if (income >= floor && income <= ceiling) {
-    return income - floor;
-  }
-
-  if (income >= floor && income >= ceiling) {
-    return (ceiling - floor);
-  }
-  // [5, 10, 10, 5, 'number when input == ceiling with nonzero floor'],
-
-  if (floor + income - ceiling) {
-    return ;
+  if (income >= floor) {
+    if (income <= ceiling) {
+      console.log("if inside if")
+      return income - floor;
+    } else {
+      return (ceiling - floor);
+    }
   }
 
   return 0;
