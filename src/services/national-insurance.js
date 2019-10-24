@@ -26,21 +26,10 @@ const bandsOnDate = (date) => {
 
 
 const slice = R.curry((floor, ceiling, income) => {
-  
-  if (income <= floor) {
-    return RD.decimal(0);
-  }
 
-  if (income >= floor) {
-    if (income <= ceiling) {
-      console.log("if inside if")
-      return income - floor;
-    } else {
-      return (ceiling - floor);
-    }
-  }
-
-  return 0;
+    if (parseInt(income) <= parseInt(floor)) return RD.decimal(0);
+    else if (parseInt(income) > floor && parseInt(income) <= ceiling) return RD.decimal(parseInt(income) - floor);
+    else if (parseInt(income) > ceiling) return RD.decimal(ceiling - floor);
 });
 
 const calcForBand = R.curry(
