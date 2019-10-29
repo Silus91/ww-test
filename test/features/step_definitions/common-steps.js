@@ -8,6 +8,7 @@ const Decimal = require('decimal.js');
 const tk = require('timekeeper');
 const moment = require('moment');
 
+
 const taxYearLookup = {
   '2016/17': '2016-04-06',
   '2017/18': '2017-04-06',
@@ -39,7 +40,7 @@ When(/^calculating my ni deductions$/,
         .send({
           income: this.income,
         });
-});
+  });
 
 Then(/^I should be liable to pay £(.*) in class 1 national insurance contributions$/,
   function process(expected) {
@@ -47,7 +48,7 @@ Then(/^I should be liable to pay £(.*) in class 1 national insurance contributi
       ['response', 'body', 'ni'],
       this.state
     );
-
     this.expect(new Decimal(actual)).toEqual(new Decimal(expected));
+
   }
 );
