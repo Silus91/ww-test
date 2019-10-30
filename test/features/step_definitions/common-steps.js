@@ -47,7 +47,8 @@ Then(/^I should be liable to pay £(.*) in class 1 national insurance contributi
     console.log(expected);
     const actual = R.path(
       ['response', 'body', 'ni'],
-      this.state
+      this.state,
+      console.log(this.state)
     );
     this.expect(new Decimal(actual)).toEqual(new Decimal(expected));
 
