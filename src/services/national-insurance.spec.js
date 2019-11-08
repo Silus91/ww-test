@@ -48,7 +48,6 @@ const BANDS = [
       },
     ],
   },
-  // ten
   {
     startDate: '2019-04-06',
     bands: [
