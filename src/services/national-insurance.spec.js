@@ -1,7 +1,6 @@
 const test = require('tape');
 const proxyquire = require('proxyquire').noCallThru();
 const RD = require('../utils/ramda-decimal');
-
 const ALLOWANCE = 702;
 const BASIC_CEILING = 3863;
 const BASIC_RATE = 0.12;
