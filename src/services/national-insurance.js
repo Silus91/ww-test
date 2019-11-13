@@ -46,6 +46,5 @@ module.exports = (runDate) => {
   );
 };
 
-// for unit tests
 module.exports.bandsOnDate = bandsOnDate;
 module.exports.slice = slice;

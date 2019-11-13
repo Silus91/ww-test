@@ -44,7 +44,6 @@ When(/^calculating my ni deductions$/,
 
 Then(/^I should be liable to pay £(.*) in class 1 national insurance contributions$/,
   function process(expected) {
-    console.log(state);
     const actual = R.path(
       ['response', 'body', 'ni'],
       this.state,
