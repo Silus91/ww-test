@@ -5,7 +5,6 @@ const responseTime = require('response-time');
 const helmet = require('helmet');
 const nocache = require('nocache');
 const handlebars = require('express-handlebars');
-
 const routes = require('./routes');
 
 const app = express();
