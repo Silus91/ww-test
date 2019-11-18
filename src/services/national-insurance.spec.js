@@ -121,7 +121,6 @@ test('national-insurance.bandsOnDate', (t) => {
       assert.plan(1);
 
       const actual = target.bandsOnDate(rundate);
-
       assert.equals(actual, expected.bands);
     });
   });
