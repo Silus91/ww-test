@@ -141,7 +141,6 @@ test('national-insurance.slice', (t) => {
   ].forEach(([floor, ceiling, input, expected, message]) => {
     t.test(message, (assert) => {
       assert.plan(1);
-
       const actual = target.slice(
         RD.decimal(floor),
         RD.decimal(ceiling),
