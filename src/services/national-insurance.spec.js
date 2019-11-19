@@ -103,7 +103,6 @@ test('national-insurance', (assert) => {
     );
   }
 });
-
 test('national-insurance.bandsOnDate', (t) => {
   [
     ['2017-04-06', BANDS[0], 'start of first band'],
