@@ -143,7 +143,6 @@ test('national-insurance.slice', (t) => {
         RD.decimal(floor),
         RD.decimal(ceiling),
       )(RD.decimal(input));
-
       assert.deepEquals(actual, RD.decimal(expected));
     });
   });
