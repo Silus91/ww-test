@@ -39,6 +39,7 @@ When(/^calculating my ni deductions$/,
         .set(this.taxYear ? { 'x-run-date': this.taxYear } : {})
         .send({
           income: this.income,
+          state
         });
   });
 
