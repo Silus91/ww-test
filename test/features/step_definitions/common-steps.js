@@ -39,7 +39,6 @@ When(/^calculating my ni deductions$/,
         .set(this.taxYear ? { 'x-run-date': this.taxYear } : {})
         .send({
           income: this.income,
-          state
         });
   });
 
@@ -50,5 +49,6 @@ Then(/^I should be liable to pay £(.*) in class 1 national insurance contributi
       this.state,
     );
     this.expect(new Decimal(actual)).toEqual(new Decimal(expected));
+    this.state
   }
 );
